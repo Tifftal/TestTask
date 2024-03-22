@@ -8,8 +8,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/test_task/" element={<Main />}/>
-          <Route path="/test_task/:id" element={<Detail />}/>
+          <Route path="/TestTask/" element={<Main />}/>
+          <Route path="/TestTask/:id" element={<Detail />}/>
         </Routes>
       </BrowserRouter>
     </>

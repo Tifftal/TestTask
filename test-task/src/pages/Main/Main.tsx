@@ -13,6 +13,7 @@ const Main = () => {
         const fetchPosts = async () => {
             try {
                 const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`);
+                console.log(page)
                 const json = await response.json();
                 setPosts(prevPosts => [...prevPosts, ...json]);
             } catch (error) {
@@ -48,7 +49,7 @@ const Main = () => {
     return (
         <div className={s.main}>
             {posts.map((post, index) => (
-                <NavLink to={`/test_task/${post.id}`} key={index}>
+                <NavLink to={`/TestTask/${post.id}`} key={index}>
                     <PostCard id={post.id} title={post.title} body={post.body} />
                 </NavLink>
             ))}
