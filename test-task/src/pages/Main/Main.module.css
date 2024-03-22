@@ -21,3 +21,9 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.main button:disabled {
+    background-color: rgb(189, 214, 222);
+    color: rgb(193, 193, 193);
+    cursor: default;
+}

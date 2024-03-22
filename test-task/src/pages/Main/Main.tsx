@@ -48,12 +48,12 @@ const Main = () => {
     return (
         <div className={s.main}>
             {posts.map((post, index) => (
-                <NavLink to={`/${post.id}`} key={index}>
+                <NavLink to={`/test_task/${post.id}`} key={index}>
                     <PostCard id={post.id} title={post.title} body={post.body} />
                 </NavLink>
             ))}
             {page >= 5 ? (
-                <button onClick={handleLoadMore} disabled={page > 9 ? true : false}>
+                <button onClick={handleLoadMore} disabled={page >= 10 ? true : false}>
                     {'Load More'}
                 </button>
             ) : "Loading..."}
